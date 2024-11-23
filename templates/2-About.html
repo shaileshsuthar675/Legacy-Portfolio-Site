@@ -1,0 +1,223 @@
+<br><br>
+<div class="row" id="about-section">
+
+    <h1 class="text-primary fw-bold fs-1 mb-4 ms-2 d-block d-md-none">Abo<span class="text-dark">ut Me</span></h1>
+    <br>
+
+    <!-- Key Skills & Short Intro -->
+    <div class="col-md-6">
+        <div class="row">
+            <div class="col-sm-6 col-md-6 d-none d-md-block">
+                <div class="about-img">
+                    <img src="/static/imgs/about-me.png" class="img-fluid shadow-sm rounded-2" alt="">
+                </div>
+            </div>
+
+            <!-- Details next to profile image -->
+            <div class="col-sm-6 col-md-6 fs-6 fw-bold text-secondary my-auto ps-4">
+                <p><span class="text-dark">Name:
+                    </span>
+                    <span>Shailesh
+                        Suthar</span>
+                </p>
+                <p><span class="text-dark">Job Role: </span> <span>Data Analyst</span>
+                </p>
+                <p><span class="text-dark">Experience: </span> <span id="experience_in_year_month"></span>
+                </p>
+                <script>
+
+                    function calculateDateDifference(startDate, endDate) {
+                        // Parse the dates if they are not Date objects
+                        if (!(startDate instanceof Date)) {
+                            startDate = new Date(startDate);
+                        }
+                        if (!(endDate instanceof Date)) {
+                            endDate = new Date(endDate);
+                        }
+
+                        var yearsDifference = endDate.getFullYear() - startDate.getFullYear();
+                        var monthsDifference = endDate.getMonth() - startDate.getMonth();
+
+                        // Adjust for partial months
+                        if (monthsDifference < 0) {
+                            yearsDifference--;
+                            monthsDifference += 12;
+                        }
+
+                        // Adjust for days
+                        if (endDate.getDate() < startDate.getDate()) {
+                            monthsDifference--;
+                            // Add 12 months to monthsDifference if it goes negative
+                            if (monthsDifference < 0) {
+                                monthsDifference += 12;
+                                yearsDifference--;
+                            }
+                        }
+
+                        return { years: yearsDifference, months: monthsDifference };
+                    }
+
+
+                    var experience_in_year_month_Element = document.getElementById('experience_in_year_month');
+                    var startDate = '2022-11-01';
+                    var endDate = Date();
+
+                    var result = calculateDateDifference(startDate, endDate);
+                    if (result['years'] === 1) {
+                        experience_in_year_month_Element.textContent = String(result['years']) + ' Year and ' + String(result['months']) + ' Months';
+                    } else if (result['Months'] === 1) {
+                        experience_in_year_month_Element.textContent = String(result['years']) + ' Years and ' + String(result['months']) + ' Month';
+                    } else if (result['Months'] === 1 && result['years'] === 1) {
+                        experience_in_year_month_Element.textContent = String(result['years']) + ' Year and ' + String(result['months']) + ' Month';
+                    } else {
+                        experience_in_year_month_Element.textContent = String(result['years']) + ' Years and ' + String(result['months']) + ' Months';
+                    }
+
+
+                </script>
+
+                <p><span class="text-dark">Address: </span> <span>Gurugram, India</span></p>
+
+            </div>
+        </div>
+
+        <!-- Key Skills -->
+        <table class="table ms-1">
+            <thead>
+                <tr>
+                    <th scope="col" class="col-5 my-auto">
+                        <h2 class="fw-bold">Key Skills</h2>
+                    </th>
+                    <th scope="col" class="my-auto" style="justify-content: center;"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="fs-6 fw-bold text-secondary">Programming</span></td>
+                    <td>
+                        <div class="progress">
+                            <div class="progress-bar bg-success active" role="progressbar" style="width: 90%;"
+                                aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><span class="fs-6 fw-bold text-secondary">Data Mining</span></td>
+                    <td>
+                        <div class="progress">
+                            <div class="progress-bar bg-success active" role="progressbar" style="width: 90%;"
+                                aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><span class="fs-6 fw-bold text-secondary">Automation</span></td>
+                    <td>
+                        <div class="progress">
+                            <div class="progress-bar bg-success active" role="progressbar" style="width: 90%;"
+                                aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><span class="fs-6 fw-bold text-secondary">Database Analytics</span></td>
+                    <td class="">
+                        <div class="progress">
+                            <div class="progress-bar bg-success active" role="progressbar" style="width: 85%;"
+                                aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><span class="fs-6 fw-bold text-secondary">Data Visualization</span></td>
+                    <td>
+                        <div class="progress">
+                            <div class="progress-bar bg-success active" role="progressbar" style="width: 90%;"
+                                aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><span class="fs-6 fw-bold text-secondary">Financial Analysis</span></td>
+                    <td>
+                        <div class="progress">
+                            <div class="progress-bar bg-success active" role="progressbar" style="width: 95%;"
+                                aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Profile Summary & info -->
+    <div class="col-md-6">
+        <div class="row">
+            <div class="col-md-12 heading-section ftco-animate ps-4">
+                <h1 class="text-primary fw-bold fs-1 mb-4 d-none d-md-block">Abo<span class="text-dark">ut
+                        Me</span></h1>
+
+                <!-- Profile Summary -->
+                <h2 class="d-block d-md-none fw-bolder">Profile Summary</h2>
+                <p id="my_introduction" class="text-secondary fw-medium fs-6 paragraph"></p>
+
+                <script src="/static/js/my_introduction.js">
+
+                </script>
+
+                <!-- Profile info table -->
+                <h2 class="fw-bolder mb-0">Profile Info</h2>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col" class="col-3 fs-4"></th>
+                            <th scope="col" class="col-9"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="fs-6 fw-bolder text-dark">Profile:</span></td>
+                            <td><span class="fs-6 fw-bold text-secondary">Data Science &amp; Analytics</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="fs-6 fw-bolder text-dark">Domain:</span></td>
+                            <td><span class="fs-6 fw-bold text-secondary">Consulting, Risk &amp;
+                                    Compliance</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="fs-6 fw-bolder text-dark">Education:</span></td>
+                            <td><span class="fs-6 fw-bold text-secondary">B.Tech from NIT, Jaipur</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="fs-6 fw-bolder text-dark">Language:</span></td>
+                            <td><span class="fs-6 fw-bold text-secondary">English, Hindi</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="fs-6 fw-bolder text-dark">Hobbies:</span></td>
+                            <td><span class="fs-6 fw-bold text-secondary">Advancements in Technologies, Chess &
+                                    Volleyball</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <br>
+        <div class="d-flex">
+            <div class="text mx-auto">
+                <p class="mb-4">
+                    <span class="text-success fs-4 fw-bolder" data-number="12">12 +</span>
+                    <span class="text-dark fs-4 fw-bolder">&nbsp; Projects completed</span>
+                </p>
+                <p style="display: flex; justify-content: center;"><a
+                        href="https://www.linkedin.com/in/shailesh-suthar-326a12202/"
+                        class="btn btn-primary py-6 px-4 rounded-4 me-2 fw-bolder">LinkedIn</a></p>
+            </div>
+        </div>
+    </div>
+</div>

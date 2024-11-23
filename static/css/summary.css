@@ -1,0 +1,56 @@
+/* Container for centering */
+.summary-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+/* Grid styling */
+.summary-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    max-width: 800px;
+}
+
+/* Card styling */
+.summary-card {
+    background: #e2eff7;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 180px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Card hover effect */
+.summary-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Content styling */
+.summary-content {
+    text-align: center;
+    color: #000000;
+}
+
+.btn {
+    text-decoration: none;
+}
+
+.number {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.label {
+    font-size: 18px;
+    margin: 0;
+}
