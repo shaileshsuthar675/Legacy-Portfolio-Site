@@ -43,7 +43,7 @@
     position: relative;
     width: 50%;
     padding: 20px;
-    background-color: #e7f0f7;
+    background-color: #f4f6f9;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
@@ -52,7 +52,7 @@
 
 .education-item:hover {
     transform: scale(1.03);
-    background-color: #d1e8ff;
+    background-color: #e7f0f7;
 }
 
 .education-item:nth-child(even) {
