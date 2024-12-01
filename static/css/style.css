@@ -40,7 +40,6 @@ body {
     margin-right: 10px;
 }
 
-
 .progress-bar.active {
     animation: reverse progress-bar-stripes 0.40s linear infinite, animate-positive 2s;
 }

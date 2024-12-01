@@ -60,7 +60,7 @@
 
 .project-title {
     color: #2c3e50;
-    font-size: 1.2em;
+    font-size: 1.4em;
     margin-bottom: 10px;
 }
 
@@ -110,4 +110,11 @@
     .project-grid {
         grid-template-columns: 1fr;
     }
+}
+
+
+.publication-journal {
+    font-style: italic;
+    color: #7f8c8d;
+    margin-top: 10px;
 }

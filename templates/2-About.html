@@ -24,57 +24,6 @@
                 </p>
                 <p><span class="text-dark">Experience: </span> <span id="experience_in_year_month"></span>
                 </p>
-                <script>
-
-                    function calculateDateDifference(startDate, endDate) {
-                        // Parse the dates if they are not Date objects
-                        if (!(startDate instanceof Date)) {
-                            startDate = new Date(startDate);
-                        }
-                        if (!(endDate instanceof Date)) {
-                            endDate = new Date(endDate);
-                        }
-
-                        var yearsDifference = endDate.getFullYear() - startDate.getFullYear();
-                        var monthsDifference = endDate.getMonth() - startDate.getMonth();
-
-                        // Adjust for partial months
-                        if (monthsDifference < 0) {
-                            yearsDifference--;
-                            monthsDifference += 12;
-                        }
-
-                        // Adjust for days
-                        if (endDate.getDate() < startDate.getDate()) {
-                            monthsDifference--;
-                            // Add 12 months to monthsDifference if it goes negative
-                            if (monthsDifference < 0) {
-                                monthsDifference += 12;
-                                yearsDifference--;
-                            }
-                        }
-
-                        return { years: yearsDifference, months: monthsDifference };
-                    }
-
-
-                    var experience_in_year_month_Element = document.getElementById('experience_in_year_month');
-                    var startDate = '2022-11-01';
-                    var endDate = Date();
-
-                    var result = calculateDateDifference(startDate, endDate);
-                    if (result['years'] === 1) {
-                        experience_in_year_month_Element.textContent = String(result['years']) + ' Year and ' + String(result['months']) + ' Months';
-                    } else if (result['Months'] === 1) {
-                        experience_in_year_month_Element.textContent = String(result['years']) + ' Years and ' + String(result['months']) + ' Month';
-                    } else if (result['Months'] === 1 && result['years'] === 1) {
-                        experience_in_year_month_Element.textContent = String(result['years']) + ' Year and ' + String(result['months']) + ' Month';
-                    } else {
-                        experience_in_year_month_Element.textContent = String(result['years']) + ' Years and ' + String(result['months']) + ' Months';
-                    }
-
-
-                </script>
 
                 <p><span class="text-dark">Address: </span> <span>Gurugram, India</span></p>
 
@@ -92,60 +41,21 @@
                 </tr>
             </thead>
             <tbody>
+
+                {% for pair in keySkills %}
                 <tr>
-                    <td><span class="fs-6 fw-bold text-secondary">Programming</span></td>
+                    <td><span class="fs-6 fw-bold text-secondary">{{pair['skill']}}</span></td>
                     <td>
                         <div class="progress">
-                            <div class="progress-bar bg-success active" role="progressbar" style="width: 90%;"
-                                aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
+                            {% set progressbar = pair['progress'] %}
+                            <div class="progress-bar bg-success active" role="progressbar"
+                                style="width: {{ pair['progress'] }}%;" aria-valuenow="{{pair['progress']}}"
+                                aria-valuemin="0" aria-valuemax="100">
+                                {{pair['progress']}}%</div>
                         </div>
                     </td>
                 </tr>
-                <tr>
-                    <td><span class="fs-6 fw-bold text-secondary">Data Mining</span></td>
-                    <td>
-                        <div class="progress">
-                            <div class="progress-bar bg-success active" role="progressbar" style="width: 90%;"
-                                aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td><span class="fs-6 fw-bold text-secondary">Automation</span></td>
-                    <td>
-                        <div class="progress">
-                            <div class="progress-bar bg-success active" role="progressbar" style="width: 90%;"
-                                aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td><span class="fs-6 fw-bold text-secondary">Database Analytics</span></td>
-                    <td class="">
-                        <div class="progress">
-                            <div class="progress-bar bg-success active" role="progressbar" style="width: 85%;"
-                                aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td><span class="fs-6 fw-bold text-secondary">Data Visualization</span></td>
-                    <td>
-                        <div class="progress">
-                            <div class="progress-bar bg-success active" role="progressbar" style="width: 90%;"
-                                aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td><span class="fs-6 fw-bold text-secondary">Financial Analysis</span></td>
-                    <td>
-                        <div class="progress">
-                            <div class="progress-bar bg-success active" role="progressbar" style="width: 95%;"
-                                aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
-                        </div>
-                    </td>
-                </tr>
+                {% endfor %}
             </tbody>
         </table>
     </div>
@@ -161,10 +71,6 @@
                 <h2 class="d-block d-md-none fw-bolder">Profile Summary</h2>
                 <p id="my_introduction" class="text-secondary fw-medium fs-6 paragraph"></p>
 
-                <script src="/static/js/my_introduction.js">
-
-                </script>
-
                 <!-- Profile info table -->
                 <h2 class="fw-bolder mb-0">Profile Info</h2>
                 <table class="table">
@@ -175,33 +81,13 @@
                         </tr>
                     </thead>
                     <tbody>
+                        {% for profile in ProfileInfo %}
                         <tr>
-                            <td><span class="fs-6 fw-bolder text-dark">Profile:</span></td>
-                            <td><span class="fs-6 fw-bold text-secondary">Data Science &amp; Analytics</span>
+                            <td><span class="fs-6 fw-bolder text-dark">{{profile.profile}}</span></td>
+                            <td><span class="fs-6 fw-bold text-secondary">{{profile.info}}</span>
                             </td>
                         </tr>
-                        <tr>
-                            <td><span class="fs-6 fw-bolder text-dark">Domain:</span></td>
-                            <td><span class="fs-6 fw-bold text-secondary">Consulting, Risk &amp;
-                                    Compliance</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><span class="fs-6 fw-bolder text-dark">Education:</span></td>
-                            <td><span class="fs-6 fw-bold text-secondary">B.Tech from NIT, Jaipur</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><span class="fs-6 fw-bolder text-dark">Language:</span></td>
-                            <td><span class="fs-6 fw-bold text-secondary">English, Hindi</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><span class="fs-6 fw-bolder text-dark">Hobbies:</span></td>
-                            <td><span class="fs-6 fw-bold text-secondary">Advancements in Technologies, Chess &
-                                    Volleyball</span>
-                            </td>
-                        </tr>
+                        {% endfor %}
                     </tbody>
                 </table>
             </div>
