@@ -96,10 +96,13 @@
 }
 
 .honors-description .highlight {
-    font-weight: bold;
-    color: #3498db;
-    text-decoration: underline;
+    /* font-weight: bold; */
+    /* color: #3498db;
+    text-decoration: underline; */
+    font-weight: 600;
+    color: var(--primary-color);
 }
+
 
 .honors-source {
     color: #521e1e;
