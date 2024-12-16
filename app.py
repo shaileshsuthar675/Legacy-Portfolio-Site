@@ -13,6 +13,9 @@ def main():
     )
 
 
+# this is for research paper page
+
+
 @app.route("/Research-paper")
 def research_paper():
     return render_template("/Research-Paper/main.html")
