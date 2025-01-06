@@ -1,7 +1,7 @@
 <br><br>
 <div class="row" id="about-section" style="justify-content: center;">
 
-    <h1 class="text-primary fw-bold fs-1 mb-4 ms-2 d-block d-md-none">Abo<span class="text-dark">ut Me</span></h1>
+    <h1 class="text-primary fw-bold fs-1 mb-4 ms-2 d-block d-md-none">Abo<span class="text-black">ut Me</span></h1>
     <br>
 
     <!-- Key Skills & Short Intro -->
@@ -14,18 +14,17 @@
             </div>
 
             <!-- Details next to profile image -->
-            <div class="col-sm-6 col-md-6 fs-6 fw-bold text-secondary my-auto ps-4">
-                <p><span class="text-dark">Name:
+            <div class="col-sm-6 col-md-6 fs-6 text-black my-auto ps-4">
+                <p><span class="text-black fw-bold">Name:
                     </span>
-                    <span>Shailesh
+                    <span class="text-primary fw-bold">Shailesh
                         Suthar</span>
                 </p>
-                <p><span class="text-dark">Job Role: </span> <span>Data Analyst</span>
+                <p><span class="text-black fw-bold">Job Role: </span> <span class="text-black">Data Analyst</span>
                 </p>
-                <p><span class="text-dark">Experience: </span> <span id="experience_in_year_month"></span>
+                <p><span class="text-black fw-bold">Experience: </span> <span id="experience_in_year_month" class="text-black"></span>
                 </p>
-
-                <p><span class="text-dark">Address: </span> <span>Gurugram, India</span></p>
+                <p><span class="text-black fw-bold">Address: </span> <span>Gurugram, India</span></p>
 
             </div>
         </div>
@@ -34,7 +33,7 @@
         <table class="table ms-1">
             <thead>
                 <tr>
-                    <th scope="col" class="col-5 my-auto">
+                    <th scope="col" class="col-6 my-auto">
                         <h2 class="fw-bold">Key Skills</h2>
                     </th>
                     <th scope="col" class="my-auto" style="justify-content: center;"></th>
@@ -44,7 +43,7 @@
 
                 {% for pair in keySkills %}
                 <tr>
-                    <td><span class="fs-6 fw-bold text-secondary">{{pair['skill']}}</span></td>
+                    <td><span class="fs-6 fw-bold text-black">{{pair['skill']}}</span></td>
                     <td>
                         <div class="progress">
                             {% set progressbar = pair['progress'] %}
@@ -64,12 +63,12 @@
     <div class="col-md-6">
         <div class="row">
             <div class="col-md-12 heading-section ftco-animate ps-4">
-                <h1 class="text-primary fw-bold fs-1 mb-4 d-none d-md-block">Abo<span class="text-dark">ut
+                <h1 class="text-primary fw-bold fs-1 mb-4 d-none d-md-block">Abo<span class="text-black">ut
                         Me</span></h1>
 
                 <!-- Profile Summary -->
                 <h2 class="d-block d-md-none fw-bolder">Profile Summary</h2>
-                <p id="my_introduction" class="text-secondary fw-medium fs-6 paragraph"></p>
+                <p id="my_introduction" class="text-black fs-6 paragraph my-3"></p>
 
                 <!-- Profile info table -->
                 <h2 class="fw-bolder mb-0">Profile Info</h2>
@@ -83,8 +82,8 @@
                     <tbody>
                         {% for profile in ProfileInfo %}
                         <tr>
-                            <td><span class="fs-6 fw-bolder text-dark">{{profile.profile}}</span></td>
-                            <td><span class="fs-6 fw-bold text-secondary">{{profile.info}}</span>
+                            <td><span class="fs-6 fw-bold text-black">{{profile.profile}}</span></td>
+                            <td><span class="fs-6 text-black">{{profile.info}}</span>
                             </td>
                         </tr>
                         {% endfor %}
@@ -98,10 +97,10 @@
             <div class="text mx-auto">
                 <p class="mb-4">
                     <span class="text-success fs-4 fw-bolder" data-number="13">13 +</span>
-                    <span class="text-dark fs-4 fw-bolder">&nbsp; Projects completed</span>
+                    <span class="text-black fs-4 fw-bolder">&nbsp; Projects completed</span>
                 </p>
                 <p style="display: flex; justify-content: center;"><a
-                        href="https://www.linkedin.com/in/shailesh-suthar-326a12202/"
+                        href="https://www.linkedin.com/in/shaileshsuthar/"
                         class="btn btn-primary py-6 px-4 rounded-4 me-2 fw-bolder">LinkedIn</a></p>
             </div>
         </div>

@@ -18,6 +18,11 @@ body {
     background-color: #007bff;
 }
 
+.center-block {
+    display: grid;
+    justify-content: center;
+ }
+
 @media (max-width: 768px) {
     .home-container-left {
         background-image: url('/static/imgs/bg_1_1_1.png');

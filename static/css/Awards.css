@@ -81,7 +81,7 @@
 }
 
 .honors-date {
-    color: #353b3c;
+    color: #000000;
     font-weight: bold;
     margin-bottom: 10px;
     display: inline-block;
@@ -91,7 +91,7 @@
 }
 
 .honors-description {
-    color: #1d1d1d;
+    color: #000000;
     margin-bottom: 10px;
 }
 

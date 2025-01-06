@@ -80,7 +80,7 @@
 }
 
 .education-date {
-    color: #353b3c;
+    color: #000000;
     font-weight: bold;
     margin-bottom: 10px;
     display: inline-block;
@@ -90,13 +90,13 @@
 }
 
 .education-degree {
-    color: #2c3e50;
+    color: #000000;
     font-size: 1.2em;
     margin-bottom: 10px;
 }
 
 .education-institution {
-    color: #1d1d1d;
+    color: #000000;
     margin-bottom: 10px;
     font-style: italic;
 }
