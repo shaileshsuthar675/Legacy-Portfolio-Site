@@ -11,7 +11,7 @@
     position: relative;
     overflow: hidden;
     border: 1px solid rgba(0, 0, 0, 0.05);
-    background-color: var(--third-color);
+    background-color: var(--card-color);
 }
 
 .experience-card::before {
@@ -21,7 +21,7 @@
     left: -50%;
     width: 200%;
     height: 200%;
-    /* background: linear-gradient(45deg, transparent, var(--third-color), transparent); */
+    /* background: linear-gradient(45deg, transparent, var(--card-color), transparent); */
     transform: rotate(-45deg);
     transition: all 0.7s ease;
     opacity: 0;
@@ -42,7 +42,7 @@
     top: 15px;
     right: 15px;
     background-color: var(--primary-color);
-    color: var(--raw-color);
+    color: var(--background-color);
     padding: 5px 12px;
     border-radius: 20px;
     font-size: 0.75rem;

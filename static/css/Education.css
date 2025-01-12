@@ -24,7 +24,7 @@
     position: relative;
     width: 50%;
     padding: 20px;
-    background-color: var(--third-color);
+    background-color: var(--card-color);
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
@@ -62,7 +62,7 @@
 }
 
 .education-date {
-    color: var(--raw-color);
+    color: var(--background-color);
     margin-bottom: 10px;
     display: inline-block;
     background-color: var(--primary-color);
@@ -84,7 +84,7 @@
 }
 
 .education-grade {
-    color: var(--primary-color);
+    color: var(--source-color);
     font-weight: bold;
 }
 
