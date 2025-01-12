@@ -7,13 +7,22 @@ body {
     color: #333;
 }
 
-:root {
+/* :root {
     --primary-color: #6D2323;
     --primary-color-hover: #4e1919;
     --secondary-color: #A31D1D;
     --third-color: #E5D0AC;
     --raw-color: #FEF9E1;
     --background-color: #FEF9E1;
+} */
+:root {
+    --primary-color: #16404d;
+    --primary-color-hover: #0a1e24;
+    --secondary-color: #dd9e3a;
+    --third-color: #eaeeed;
+    --card-color-hover: #cbe6de;
+    --raw-color: #FBF5DD;
+    --background-color: #FBF5DD;
 }
 .text-color {
     color: var(--secondary-color) !important;

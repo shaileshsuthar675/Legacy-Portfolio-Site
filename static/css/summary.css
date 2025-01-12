@@ -37,7 +37,7 @@
 /* Content styling */
 .summary-content {
     text-align: center;
-    color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 .btn {
