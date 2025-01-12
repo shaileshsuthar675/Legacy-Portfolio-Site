@@ -8,14 +8,63 @@ body {
 }
 
 :root {
-    --primary-color: #007bff;
-    --secondary-color: #6c757d;
-    --background-color: #ffffff;
+    --primary-color: #6D2323;
+    --primary-color-hover: #4e1919;
+    --secondary-color: #A31D1D;
+    --third-color: #E5D0AC;
+    --raw-color: #FEF9E1;
+    --background-color: #FEF9E1;
+}
+.text-color {
+    color: var(--secondary-color) !important;
+}
+
+.nav-bg {
+    background-color: var(--third-color);
+}
+.nav-item-text-color {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-color-hover) !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: 0.7s;
+}
+
+.btn-primary {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+    color: var(--raw-color) !important;
+}
+
+th, td {
+    background-color: var(--raw-color) !important;
+}
+
+.subheading-title {
+    text-align: center;
+    color: #000000;
+    font-weight: bold;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.subheading-title::after {
+    content: '';
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    height: 3px;
+    background-color: var(--primary-color);
 }
 
 .borderline1 {
     height: 2px;
-    background-color: #007bff;
+    background-color: var(--primary-color);
 }
 
 .center-block {
@@ -71,90 +120,3 @@ body {
     border-left: none !important;
 }
 
-/*  */
-
-.experience-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    perspective: 1000px;
-}
-
-.experience-card {
-    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    transform-style: preserve-3d;
-    position: relative;
-    overflow: hidden;
-    border: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-.experience-card::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: linear-gradient(45deg, transparent, rgba(0, 123, 255, 0.1), transparent);
-    transform: rotate(-45deg);
-    transition: all 0.7s ease;
-    opacity: 0;
-    z-index: 1;
-}
-
-.experience-card:hover::before {
-    opacity: 1;
-}
-
-.experience-card:hover {
-    transform: rotateX(5deg) rotateY(-5deg) scale(1.03);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-}
-
-.date-badge {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    background-color: var(--primary-color);
-    color: white;
-    padding: 5px 12px;
-    border-radius: 20px;
-    font-size: 0.75rem;
-    letter-spacing: 0.5px;
-}
-
-.bullet_point {
-    font-weight: 600;
-    color: var(--primary-color);
-    position: relative;
-}
-
-@keyframes slideInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.ftco-animate {
-    opacity: 0;
-    animation: slideInUp 0.8s ease-out forwards;
-    animation-delay: calc(var(--delay) * 0.2s);
-}
-
-.company-logo {
-    max-width: 100px;
-    /* position: relative;
-    top: 15px;
-    left: 15px; */
-    opacity: 0.7;
-    transition: opacity 0.3s ease;
-}
-
-.experience-card:hover .company-logo {
-    opacity: 1;
-}

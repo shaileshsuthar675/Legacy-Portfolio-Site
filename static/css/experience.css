@@ -1,0 +1,84 @@
+
+.experience-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    perspective: 1000px;
+}
+
+.experience-card {
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transform-style: preserve-3d;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    background-color: var(--third-color);
+}
+
+.experience-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    /* background: linear-gradient(45deg, transparent, var(--third-color), transparent); */
+    transform: rotate(-45deg);
+    transition: all 0.7s ease;
+    opacity: 0;
+    z-index: 1;
+}
+
+.experience-card:hover::before {
+    opacity: 1;
+}
+
+.experience-card:hover {
+    transform: rotateX(5deg) rotateY(-5deg) scale(1.03);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.date-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: var(--primary-color);
+    color: var(--raw-color);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
+}
+
+.bullet_point {
+    font-weight: 600;
+    color: var(--primary-color);
+    position: relative;
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.ftco-animate {
+    opacity: 0;
+    animation: slideInUp 0.8s ease-out forwards;
+    animation-delay: calc(var(--delay) * 0.2s);
+}
+
+.company-logo {
+    max-width: 100px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.experience-card:hover .company-logo {
+    opacity: 1;
+}
