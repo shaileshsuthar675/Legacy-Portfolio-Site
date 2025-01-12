@@ -21,8 +21,8 @@ body {
     --secondary-color: #dd9e3a;
     --third-color: #eaeeed;
     --card-color-hover: #cbe6de;
-    --raw-color: #FBF5DD;
-    --background-color: #FBF5DD;
+    --raw-color: #faf7ea;
+    --background-color: #faf7ea;
 }
 .text-color {
     color: var(--secondary-color) !important;
