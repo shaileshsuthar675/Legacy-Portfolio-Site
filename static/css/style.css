@@ -19,10 +19,10 @@ body {
     --primary-color: #16404d;
     --primary-color-hover: #0a1e24;
     --secondary-color: #dd9e3a;
-    --third-color: #eaeeed;
+    --third-color: #dfeeeb;
     --card-color-hover: #cbe6de;
-    --raw-color: #faf7ea;
-    --background-color: #faf7ea;
+    --raw-color: #ffffff;
+    --background-color: #ffffff;
 }
 .text-color {
     color: var(--secondary-color) !important;
