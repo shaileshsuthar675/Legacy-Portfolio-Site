@@ -7,7 +7,7 @@ body {
     color: #333;
 }
 
-:root {
+/* :root {
     --primary-color: #3498db;
     --primary-color-hover: #236896;
     --card-color: #e7f0f7;
@@ -15,6 +15,15 @@ body {
     --background-color: #ffffff;
     --nav-bg-color: #f8f9fa;
     --source-color: #521e1e;
+} */
+:root {
+    --primary-color: #B17457;
+    --primary-color-hover: #6e4837;
+    --card-color: #ebe5d5;
+    --card-color-hover: #D8D2C2;
+    --background-color: #FAF7F0;
+    --nav-bg-color: #B17457;
+    --source-color: #4A4947;
 }
 
 .text-color {
@@ -25,7 +34,8 @@ body {
     background-color: var(--nav-bg-color);
 }
 .nav-item-text-color {
-    color: var(--primary-color);
+    color: var(--background-color) !important;
+    /* color: var(--primary-color); */
     font-weight: bold;
 }
 
