@@ -1,0 +1,35 @@
+.install-section {
+    margin: 20px 0;
+    padding: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+}
+
+.os-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.code-block {
+    background: var(--code-bg);
+    padding: 12px;
+    border-radius: 4px;
+    font-family: monospace;
+    position: relative;
+    margin: 10px 0;
+}
+
+
+.code-block:hover .copy-btn {
+    opacity: 1;
+}
+
+.note {
+    background: #fff3cd;
+    border-left: 4px solid #ffeeba;
+    padding: 10px;
+    margin: 10px 0;
+}

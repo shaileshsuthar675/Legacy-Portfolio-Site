@@ -1,0 +1,48 @@
+<div id="Sample-Code">
+    <h2 class="subheading-title mb-3 py-4">Sample Code</h2>
+    <br>
+    <div class="text-black fs-5 paragraph">
+        <p>
+            The Python Standard Library is a set of pre-written script modules that may be imported
+            into a Python application to speed up and streamline routine tasks. You can utilise them
+            in your script by "calling" or "importing" them at the very beginning of your code. Le see a
+            sample code written below of how to use the PyautoPDF library.</p>
+
+    </div>
+    <div class="install-section">
+        <div class="os-title">
+            <span>Steps to Note</span>
+        </div>
+        <li>Open any IDE in your local preferably PyCharm, create a new project and one
+            sample.py file it that folder.</li>
+        <li>After that open PyCharm terminal and type the command for installation of PyautoPDF
+            as per your operating system.</li>
+        <li>After successful installation of PyautoPDF from open source PiP repository, write the
+            sample code inside the sample.py file as mentioned below.</li>
+        <div class="code-block">
+            <pre><code># import the library
+from PyautoPDF.PdfAutomationModule import PdfAutomation
+import PyautoPDF
+
+# create excel workbook
+wb = PyautoPDF.create_wb()
+
+# create a sheet at index zero in the existing workbook
+sheet1 = PyautoPDF.create_sheet(wb=wb, sheet_name='Sheet1', index=0)
+
+# variable declaration for sheet
+sheet1 = PdfAutomation(target_sheet=sheet1)
+
+# applying methods to do the color filling task
+sheet1.color_filling(1, 1, 6, 8, 2, 1)
+
+# applying methods to adjust the column width
+col_width = {'A': 10, 'B': 15, 'C': 8, 'D': 30}
+sheet1.adjust_columns(col_width=col_width)
+
+# saving the workbook
+wb.save('test.xlsx')
+</code></pre>
+        </div>
+    </div>
+</div>

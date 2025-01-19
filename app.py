@@ -14,11 +14,15 @@ def main():
 
 
 # this is for research paper page
-
-
-@app.route("/Research-paper")
+@app.route("/research-paper")
 def research_paper():
-    return render_template("/Research-Paper/main.html")
+    return render_template("/research-paper/main.html")
+
+
+#
+@app.route("/jpmc-project")
+def JPMC_Project():
+    return render_template("/jpmc-project/main.html")
 
 
 if __name__ == "__main__":
